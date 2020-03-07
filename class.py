@@ -29,3 +29,34 @@ your_dog = Dog("нурик", 32)
 print("\nТвоя собачка: " + your_dog.name.title())
 print("Ему " + str(your_dog.age) + " лет")
 your_dog.roll_over()
+
+# Задания к уроку.
+
+"""9.1. Ресторан: создайте класс с именем Restaurant. Метод __init__() класса Restaurant должен содержать два атрибута: 
+restaurant_name и cuisine_type. Создайте метод describe_restaurant(), который выводит два атрибута, 
+и метод open_restaurant(), который выводит сообщение о том, что ресторан открыт.
+Создайте на основе своего класса экземпляр с именем restaurant. Выведите два атрибута по отдельности, 
+затем вызовите оба метода."""
+
+print("\n\n\n\t\t\t### <<< Здесь, значит, получается, начинается выполнение заданий >>> ###")
+
+class Restaurant():
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+
+    def describe_restaurant(self):
+        print("Ресторан, значит, называется " + "'" + self.restaurant_name.title() + "'." + " А тип ресторана: " +
+              restaurant.cuisine_type)
+
+    def open_restaurant(self):
+        print("Значит так. Получается, ресторанчик наш, открыт. Так, получается?")
+
+
+restaurant = Restaurant("Del Mar", "Luxury")
+
+print("\n" + restaurant.restaurant_name)
+print(restaurant.cuisine_type + "\n")
+
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
