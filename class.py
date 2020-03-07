@@ -2,6 +2,8 @@
 class Dog():
     """Простая модель собачатины."""
 
+    sounds = "Гав-гав!"
+
     def __init__(self, name, age):
         """Инициализируем атрибуты нейм и эйдж."""
         self.name = name
@@ -15,6 +17,9 @@ class Dog():
         """Собака перекатывается по команде."""
         print(self.name.title() + " перекатывается!")
 
+    def say(self):
+        print(self.name.title() + ' говорит: \"' + self.sounds + "\"")
+
 
 my_dog = Dog('вадик', 6)
 
@@ -23,6 +28,7 @@ print("Ей, значит, получается, уже " + str(my_dog.age) + " 
 
 my_dog.sit()
 my_dog.roll_over()
+my_dog.say()
 
 your_dog = Dog("нурик", 32)
 
