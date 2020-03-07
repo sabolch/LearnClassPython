@@ -24,8 +24,8 @@ print("Ей, значит, получается, уже " + str(my_dog.age) + " 
 my_dog.sit()
 my_dog.roll_over()
 
-your_dog = Dog("Нурик", 32)
+your_dog = Dog("нурик", 32)
 
-print("\nТвоя собачка: " + your_dog.name)
+print("\nТвоя собачка: " + your_dog.name.title())
 print("Ему " + str(your_dog.age) + " лет")
 your_dog.roll_over()
