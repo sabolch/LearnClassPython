@@ -44,7 +44,7 @@ restaurant_name и cuisine_type. Создайте метод describe_restaurant
 Создайте на основе своего класса экземпляр с именем restaurant. Выведите два атрибута по отдельности, 
 затем вызовите оба метода."""
 
-print("\n\n\n\t\t\t### <<< Здесь, значит, получается, начинается выполнение заданий >>> ###")
+print("\n\n\n\t\t\t### <<< Здесь, значит, получается, начинается выполнение заданий 9.1 >>> ###")
 
 class Restaurant():
     def __init__(self, restaurant_name, cuisine_type):
@@ -53,7 +53,7 @@ class Restaurant():
 
     def describe_restaurant(self):
         print("Ресторан, значит, называется " + "'" + self.restaurant_name.title() + "'." + " А тип ресторана: " +
-              restaurant.cuisine_type)
+              self.cuisine_type.title())
 
     def open_restaurant(self):
         print("Значит так. Получается, ресторанчик наш, открыт. Так, получается?")
@@ -66,3 +66,46 @@ print(restaurant.cuisine_type + "\n")
 
 restaurant.describe_restaurant()
 restaurant.open_restaurant()
+
+"""9.2. Три ресторана: начните с класса из упражнения 9.1. Создайте три разных экземпляра, вызовите для каждого 
+экземпляра метод describe_restaurant()."""
+
+fabrika = Restaurant("Fabrika", "lounge")
+pizzaHouse = Restaurant("pizza house", "Lux")
+indi = Restaurant("indi", "bistro")
+
+print("\n\n\n\t\t\t### <<< Здесь, значит, получается, начинается выполнение заданий 9.2 >>> ###")
+
+fabrika.describe_restaurant()
+pizzaHouse.describe_restaurant()
+indi.describe_restaurant()
+
+"""9.3. Пользователи: создайте класс с именем User. Создайте два атрибута first_name и last_ name, а затем еще 
+несколько атрибутов, которые обычно хранятся в профиле пользователя. Напишите метод describe_user(), который выводит 
+сводку с информацией о пользователе. Создайте еще один метод greet_user() для вывода персонального приветствия для 
+пользователя.
+Создайте несколько экземпляров, представляющих разных пользователей. Вызовите оба метода для каждого пользователя."""
+
+print("\n\n\n\t\t\t### <<< Здесь, значит, получается, начинается выполнение задания 9.2 >>> ###\n")
+
+class User():
+    def __init__(self, first_name, last_name, age, dick):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.dick = dick
+
+    def describe_user(self):
+        print("Имя: " + self.first_name.title() + "\nФамилия: " + self.last_name.title() + "\nВозраст: " + str(self.age) +
+              "\nЧлен: " + str(self.dick) + "см")
+
+    def greet_user(self):
+        print("Ассаламу Алейкум, " + self.first_name + "!")
+
+
+zalim = User("Залим", "Великолепный", 26, 15)
+vitalina = User("Виталик", "Давыдов", 27, 9)
+sabolch = User("Саболч", "Хусти", 35, 24)
+
+zalim.describe_user()
+vitalina.greet_user()
