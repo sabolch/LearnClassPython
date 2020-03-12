@@ -182,3 +182,15 @@ my_tesla = ElectricCar('tesla', 'model S', 2020)
 print(my_tesla.get_descriptive())
 my_tesla.describe_battery()
 my_tesla.read_odometer()
+
+# Нужно рассмотреть больше случаев в if-elif-else
+for messages_count in range(0, 100):
+    remainder = messages_count % 10
+    if messages_count == 0:
+        print('У вас нет новых сообщений')
+    elif remainder == 1:
+        print('У вас', messages_count, 'сообщение')
+    elif remainder < 5:
+        print('У вас', messages_count, 'сообщения')
+    elif remainder <= 10:
+        print('У вас', messages_count, 'сообщений')
