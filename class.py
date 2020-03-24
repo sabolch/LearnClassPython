@@ -1,3 +1,5 @@
+import difflib
+
 # Эрик Мэтиз, классы
 class Dog():
     """Простая модель собачатины."""
@@ -113,7 +115,6 @@ class User():
     def increment_login_attempts(self):
         self.login_attempts += 1
 
-
     def reset_login_attempts(self):
         self.login_attempts = 0
 
@@ -137,6 +138,7 @@ print("Попыток входа: " + str(zalim.login_attempts))
 zalim.reset_login_attempts()
 print("<# reset login attempts #>".capitalize())
 print("Попыток входа: " + str(zalim.login_attempts))
+
 
 #
 class Car():
@@ -183,14 +185,8 @@ print(my_tesla.get_descriptive())
 my_tesla.describe_battery()
 my_tesla.read_odometer()
 
-# Нужно рассмотреть больше случаев в if-elif-else
-for messages_count in range(0, 100):
-    remainder = messages_count % 10
-    if messages_count == 0:
-        print('У вас нет новых сообщений')
-    elif remainder == 1:
-        print('У вас', messages_count, 'сообщение')
-    elif remainder < 5:
-        print('У вас', messages_count, 'сообщения')
-    elif remainder <= 10:
-        print('У вас', messages_count, 'сообщений')
+squares = ['dreamdesk/' + '0' + str(value) + '.jpeg' for value in range(1, 73)]
+print(squares)
+
+
+
